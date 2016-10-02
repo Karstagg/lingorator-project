@@ -1,0 +1,595 @@
+/*8 bit font from https://fontlibrary.org/en/font/8bit-wonder */
+
+html, body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 15pt;
+	background: #eee;
+	margin: 0px;
+	height: 100%;
+	
+}
+table, th, td {
+    border: 1px solid black;
+    margin: 0 auto;
+	
+}
+
+#result_table { /*table used to display translation text and equivelent english text*/
+    border: none;
+    margin: 0 auto;
+	
+}
+#result_td {
+	border: none;
+	
+}
+
+#result_td_2 {
+	border: none;
+	background: #ddd;
+	color: black;
+	
+}
+#result_td_3 {
+	border: none;
+	background: #eee;
+	color: black;
+	
+}
+#result_table_2 { /*table used to display translation text and equivelent english text*/
+    border: none;
+    margin: 0 auto;
+	color: white;
+	background: #555;
+	
+}
+
+
+
+#text_div { /*for most text*/
+	  font-family: '8BITWONDERNominal';
+	  font-weight: normal; 
+	  font-style: normal;
+	  font-size: 12pt;
+}
+#text_div_main { /*for most text*/
+	  font-family: '8BITWONDERNominal';
+	  font-weight: normal; 
+	  font-style: normal;
+	  font-size: 12pt;
+	  float: right;
+}
+#header { /*for the header*/
+	
+	  width: 100%;
+	  height: 220px;
+	  background: #222;
+	  margin-left:0px;
+      vertical-align: top;
+	  font-family: '8BITWONDERNominal';
+	  font-weight: normal; 
+	  font-style: normal; 
+	  box-shadow:  0 9px #999;
+}
+
+
+
+.wrapper {
+	text-align:center;
+}
+#headertext1 { /*title*/
+	 
+	  z-index: 950;
+	  width: 1000px;
+	  text-align:center;
+	  font-size: 25pt;
+	  color: #fff;
+	  text-shadow: 2px 2px 	#3CC;
+	  padding: 1px;
+
+	  
+}
+#headertext2 { /*subtitle*/
+	  z-index: 950;
+	  width: 900px;
+	  text-align: right;
+	  font-size: 10pt;
+	  color: #eee;
+	  text-shadow: 2px 2px 	#399;
+	  
+}
+
+
+#lang_page_div { /*div on the language page*/
+	  z-index: 950;
+	  width: 100%;
+	  height: 100px;
+	 
+	  margin-left:0px;
+	  margin-top:10px;
+      vertical-align: top;
+	  font-family: '8BITWONDERNominal';
+	  font-weight: normal; 
+	  font-style: normal; 
+	 
+}
+#lang_page_name {
+	   width: 1000px;
+	   margin-left: 590px;
+	  text-align:center;
+	  font-size: 25pt;
+	  color: #222;
+	  text-shadow: 2px 2px 	#555;
+	
+}
+#lang_container { /*contains the content on the main pages*/
+	width: 1300px;
+	margin-left: 300px;
+}
+#lang_page_text { /*displays information about the language and POS tagging keys*/
+	
+	float:left;
+	 width: 40%;
+	 overflow:hidden;
+	 text-align:left;
+	  font-family: '8BITWONDERNominal';
+	  font-weight: normal; 
+	  font-style: normal;
+	  font-size: 12pt;
+	  
+
+}
+#lang_text_area{
+ font-family: '8BITWONDERNominal';
+	  font-weight: normal; 
+	  font-style: normal;
+	  font-size: 12pt;
+	width: 60%;
+	float:right;
+	 overflow:hidden;
+	text-align: center;
+	
+}
+#translation_text_area{ /*area where translations are displayed*/
+	 font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  font-weight: normal; 
+	  font-style: normal;
+	  font-size: 14pt;
+	width: 60%;
+	max-height: 200px;
+	float:right;
+	 overflow-y:scroll;
+	 overflow-x: scroll;
+	text-align: left;
+	background-color: white;
+	 white-space:nowrap;
+	
+	
+}
+
+#english{
+	text-align:left;
+	width:100%;
+	height: 25px;
+	
+}
+#selected_v{
+	text-align:left;
+	width:90%;
+	height: 20px;
+	
+}
+no8bit{ /* a way of removing the 8 bit font styling from certain things*/
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 15pt;
+}
+
+#login { /*login div at the top of the page*/
+	   float:right;
+	   z-index: 900;
+	   padding-top: 10px;
+	   width:90%;
+	   color: #fff;
+	   text-align: right;
+}
+#login_button { /*login button in the overlay*/
+  
+  margin-right: 30px;
+  font-family: '8BITWONDERNominal';
+  font-weight: normal; 
+  font-style: normal; 
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15pt;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #222;
+  background-color: #ddd;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 0 9px #999;
+ width: 100%;
+  
+}
+#login_button:active { /*clicked login button*/
+  background-color: #222;
+  color: #eee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+#nav { /*navigation div*/
+    line-height:30px;
+	
+	color: #222;
+    background-color:#555;
+	 z-index: 1000;
+	font-size: 20pt;
+    height: 100%;
+    width:220px;
+    float:left;
+    padding:5px; 
+	text-align: center;
+	border-right: 6px;
+	box-shadow: 9px 0 #999;
+	margin-top:9px;
+}
+
+#nav_button { /*site navigation buttons*/
+ 
+  font-family: '8BITWONDERNominal';
+  font-weight: normal; 
+  font-style: normal; 
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 12pt;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #222;
+  background-color: #ddd;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 0 9px #999;
+  width: 90%;
+  
+}
+#nav_button_current { /*the button for the current page*/
+ 
+  font-family: '8BITWONDERNominal';
+  font-weight: normal; 
+  font-style: normal; 
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 12pt;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #222;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 0 9px #999;
+  width: 90%;
+  
+}
+#nav_button_current:active { /*when a nav button is clicked*/
+  background-color: #222;
+  color: #eee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#nav_button:active {
+  background-color: #222;
+  color: #eee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+textarea {/*prevents text areas from being resized which could force the submit button off of the screen */
+    resize: none;
+}
+
+/* addapted from http://jsfiddle.net/JoshMesser/vbMw3/	*/
+
+/*contains forms to create a language/ login logout*/
+#overlay1{ /* we set all of the properties for our overlay */
+    height:900px;
+    width:800px;
+    margin:0 25%;
+    background:black;
+    color:black;
+    padding:20px;
+    position:absolute;
+    top:5%;
+    left:10%;
+    z-index:1000;
+    display:none;
+    /* CSS 3 */
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
+}
+/*contains guides*/
+#overlay2{ /* we set all of the properties for our overlay */
+      height:900px;
+    width:800px;
+    margin:0 25%;
+    background:black;
+    color:black;
+    padding:20px;
+    position:absolute;
+    top:5%;
+    left:10%;
+    z-index:1000;
+    display:none;
+    /* CSS 3 */
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
+}
+/* use :target to look for a link to the overlay then we find our mask */
+#overlay1:target, #overlay1:target + #mask{
+    display:block;
+    opacity:1;
+}
+#overlay2:target, #overlay2:target + #mask{
+    display:block;
+    opacity:1;
+}
+.close{ /* to make a nice looking pure CSS3 close button */
+    display:block;
+    position:absolute;
+    top:-20px;
+    right:-20px;
+    background:#8e8588;
+    color:black;
+    height:40px;
+    width:40px;
+    line-height:40px;
+    font-size:35px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    -webkit-border-radius:40px;
+    -moz-border-radius:40px;
+    -o-border-radius:40px;
+    border-radius:40px;
+}
+#open-overlay{ /* open the overlay */
+    margin-right: 30px;
+  font-family: '8BITWONDERNominal';
+  font-weight: normal; 
+  font-style: normal; 
+  display: inline-block;
+  padding: 7px 7px;
+  font-size: 8pt;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #222;
+  background-color: #eee;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 0 2px #999;
+}
+#open-overlay2{ /* open the overlay */
+  font-family: '8BITWONDERNominal';
+  font-weight: normal; 
+  font-style: normal; 
+  display: inline-block;
+  padding: 7px 4px;
+  font-size: 12pt;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #222;
+  background-color: #ddd;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 0 9px #999;
+  width: 88%;
+  
+}
+#open-overlay:active { 
+  background-color: #222;
+  color: #eee;
+  box-shadow: 0 0px #666;
+  transform: translateY(4px);
+}
+#open-overlay2:active { 
+  background-color: #222;
+  color: #eee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#login_form { /*the login form*/
+	text-align: center;
+	font-size: 15pt;
+}
+#reg_div{
+	text-align: center;
+	font-size: 15pt;
+}
+#reg_div2{ /*or*/
+	text-align: center;
+	font-size: 15pt;
+
+}
+#reg_div3{ /* register button */
+	text-align: center;
+	font-size: 10pt;
+
+}
+#login_button_div{ /*login button*/
+	text-align: center;
+	font-size: 15pt;
+
+}
+
+
+
+#reg_close { /*button to go return to the login screen*/
+ 
+  font-family: '8BITWONDERNominal';
+  font-weight: normal; 
+  font-style: normal; 
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15pt;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #222;
+  background-color: #ddd;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 0 9px #999;
+  width: 100%;
+  
+}
+#reg_button { /*register button*/
+ 
+  font-family: '8BITWONDERNominal';
+  font-weight: normal; 
+  font-style: normal; 
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15pt;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #222;
+  background-color: #ddd;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 0 9px #999;
+  width: 100%;
+  
+}
+#reg_button:active {/*activated register button*/
+  background-color: #222;
+  color: #eee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#reg_close:active {
+  background-color: #222;
+  color: #eee;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#reg_form { /*the registration form*/
+
+	color: #222;
+	font-family: '8BITWONDERNominal';
+	font-weight: normal; 
+	font-style: normal; 
+	font-size: 9pt;
+    float:left;
+    padding:2px; 
+	text-align: left;
+	margin-top:2px;
+	width: 100%;
+}
+
+#logout_button_s { /*small logout button*/
+	 margin-right: 30px;
+  font-family: '8BITWONDERNominal';
+  font-weight: normal; 
+  font-style: normal; 
+  display: inline-block;
+  padding: 7px 7px;
+  font-size: 8pt;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #222;
+  background-color: #eee;
+  border: none;
+  border-radius: 10%;
+  box-shadow: 0 2px #999;
+}
+/*buttons for ipa entry keyboard*/
+.keyboard { 
+	width: 100%;
+}
+/*space button*/
+#space{ 
+	width: 200px;
+	margin: 0 auto;
+	
+}
+/*+button*/
+#plus{ 
+	width: 200px;
+	margin: 0 auto;
+	
+}
+/*back space button*/
+#back{ 
+	width: 200px;
+	margin: 0 auto;
+	
+}
+/*text div for ipa*/
+#selected_id { 
+	width: 90%;
+}
+
+
+/* Tooltip stuff modified from http://www.w3schools.com/css/css_tooltip.asp*/
+.tooltip {
+	font-family: '8BITWONDERNominal';
+	font-weight: normal; 
+	font-style: normal; 
+	display: inline-block;
+	color: #666;
+    position: absolute;
+	right: 0;
+	top: 0;
+	margin-right: 10px;
+    display: inline-block;
+
+}
+
+
+.tooltip .tooltiptext {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 15pt;
+	visibility: hidden;
+    width: 500px;
+	float: left;
+    background-color: #666;
+    color: #ddd;
+    text-align: left;
+    padding: 5px ;
+    border-radius: 6px;
+	margin-left: 10px;
+    position: absolute;
+    z-index: 1;
+	right: 0;
+}
+
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltip:hover  {
+     color: #ddd;
+}

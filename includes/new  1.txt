@@ -1,0 +1,88 @@
+$multidimensional_diphthongs = [];
+					
+					$multidimensional_diphthongs_ipa = [];
+					$multi_dip_obj = (object) $multidimensional_diphthongs;
+					foreach ($user_diphthongs as $key => $value) {
+						$multidimensional_diphthongs[$value] = explode("+", $value);
+						foreach ($multidimensional_diphthongs as $key2 => $value2) {
+							$temp_array = [];
+							$temp_array_2 = [];
+							foreach ($value2 as $value3) {
+								
+								if (array_key_exists($value3, $ipa_all_vowels)) {
+									$temp_array[] = $ipa_all_vowels[$value3];
+								}
+							}
+							
+							$multidimensional_diphthongs_ipa[$key2] = $temp_array;
+						}
+						
+						
+						
+							/*if ($syllables == 'open' || $closed_chance < 2) {
+		if ($vowel_initial_chance == 1) {
+		
+			if ($dip_chance == 1) {	
+				if (is_array($diphthongs) && count($diphthongs) > 0) {
+					$syllable_array[0] = $diphthongs[array_rand($diphthongs)];
+				}
+				else {
+					if ($long_chance == 1) {
+						$syllable_array[0] = $vowel[array_rand($vowel)] . ":";
+					}
+					else {
+						$syllable_array[0] = $vowel[array_rand($vowel)];
+					}
+				}
+			}
+			else {
+				if ($long_chance == 1) {
+						$syllable_array[0] = $vowel[array_rand($vowel)] . ":";
+					}
+					else {
+						$syllable_array[0] = $vowel[array_rand($vowel)];
+					}
+			}
+		}
+	}
+	else {
+		
+		if ($vowel_initial_chance == 1) {
+			
+			if ($closed_chance > 1) {
+				
+				if ($dip_chance == 1) {	
+				
+					if (is_array($diphthongs) && count($diphthongs) > 0) {
+						if (is_array($cluster_values_coda) && count($cluster_values_coda) > 0 && $coda_clus_chance == 1) {
+							$syllable_array[0] = $diphthongs[array_rand($diphthongs)] . "+" . $cluster_values_coda[array_rand($cluster_values_coda)];
+						}
+						else {
+							$syllable_array[0] = $diphthongs[array_rand($diphthongs)] . "+" . $coda_consonant_values[array_rand($coda_consonant_values)];
+						}
+					}
+				}
+				else {
+						
+					if (is_array($cluster_values_coda) && count($cluster_values_coda) > 0 && $coda_clus_chance == 1) {
+						if ($long_chance == 1) {
+							$syllable_array[0] = $vowel[array_rand($vowel)] . ":" . "+" . $cluster_values_coda[array_rand($cluster_values_coda)];
+						}
+						else {
+							$syllable_array[0] = $vowel[array_rand($vowel)] . "+" . $cluster_values_coda[array_rand($cluster_values_coda)];
+						}
+					}
+					else {
+						if ($long_chance == 1) {
+							$syllable_array[0] = $vowel[array_rand($vowel)] . ":" . "+" . $coda_consonant_values[array_rand($coda_consonant_values)];
+						}
+						else {
+							$syllable_array[0] = $vowel[array_rand($vowel)] . "+" . $coda_consonant_values[array_rand($coda_consonant_values)];
+						}
+					}
+				}
+				
+			}
+			
+		}
+	} */
