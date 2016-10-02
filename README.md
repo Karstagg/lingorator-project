@@ -1,0 +1,2 @@
+# lingorator-project
+Lingorator Application 
