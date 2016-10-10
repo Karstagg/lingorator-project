@@ -1,1 +1,0 @@
-I have not set a root password for phpMyAdmin on purpose to make this project easier to grade.
